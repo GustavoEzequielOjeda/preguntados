@@ -1,0 +1,52 @@
+#Usar comillas simples en los comentarios. ''
+#
+#
+#
+
+SI RESPONDE MAL:
+Resta una vida
+Pasa a la siguiente pregunta
+
+SI RESPONDE BIEN:
+Suma Puntos 
+Pasa a la siguiente pregunta
+
+
+HECHO
+    # ✅Paso 1, Menu: Jugar, Configurar Juego; Cant d Puntos x Res Correcta, Cant Vidas, Cant de Tiempo entre 
+    # Preguntas, TOP, Agregar Preguntas, Estadisticas de Preguntas. 
+
+
+    # ✅Paso 2, Preguntas(juego principal): Preguntas(10), Respuestas, Logica de Respuesta.
+
+# ! La lista de preguntas con el diccionario
+# ! La pregunta actual
+# ! Se almacenara las preguntas que ya se usaron
+
+A COMPLETAR
+    # Paso 3, Contadores: Vidas, Puntuacion, Respuestas Correctas, Tiempo.
+
+    # Paso 4, Datos-Acumuladores: Jugador(opcional); Posicion, Nombre, Respuestas Correctas, Puntuacion,
+    # Tiempo, Estadisticas de Preguntas; porcentaje de aciertos, cantidad de fallos, cantidad 
+    # de aciertos y la cantidad de veces que fue preguntada. 
+
+    # Paso 5, Configuracion: Cant d Puntos x Res Correcta, Cant Vidas, Cant de Tiempo entre 
+    # Preguntas, Agregar Preguntas.
+
+
+"""
+4 Respuestas 1 Correcta
+
+Correcto = +1 punto
+
+3 vidas
+Incorrecto = -1 Vida
+
+0 vidas= termina la partida ingresando su nombre de usuario
+
+Guardar puntaje en un ranking top 10:
+El usuario deberá de poder ver en formato de tabla a las diez mejores partidas registradas,
+viéndose en la tabla: El top, el nombre del usuario y la cantidad de respuestas correctas
+
+Al finalizar la partida, esta misma deberá de registrarse para luego ser mostrada.
+"""
