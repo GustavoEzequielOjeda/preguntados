@@ -1,6 +1,8 @@
 from preguntas import preguntas_lista
 from game_master import Juego
 
+import random
+import pygame
 
 #-----------------------------------------------ACA SE EJECUTA EL JUEGO-----------------------------------------------
 
@@ -36,8 +38,11 @@ def ejecutar():
 
         if seleccion == '1':  
             print("\nIniciando el juego...")
-            partida = Juego(preguntas_lista)  
-            partida.iniciar_partida()
+            partida = Juego(3, 1, len(preguntas_lista))
+            partida.validar_respuesta(preguntas_lista)
+
+            jugador = partida.partida_terminar()
+            print(jugador)
 
 #----------COFIGURACION DEL JUEGO
 
