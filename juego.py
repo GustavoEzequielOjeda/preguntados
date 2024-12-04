@@ -24,15 +24,22 @@ def ejecutar():
         # ¿Que devuelve? Dependiendo de que opcion elija; Empieza el juego o Muestra un submenu
     puntos_sumar = 1  
     vida = 3  
+    tiempo_limite_preguntas = 10
 
     while True:
         seleccion = mostrar_menu_principal()
+#----------------------------  EJECUTA EL JUEGO ----------------
 
         if seleccion == '1':  
             print("\nIniciando el juego...")
-            partida = Juego(vida, puntos_sumar, len(preguntas_lista))
+            partida = Juego(vida, puntos_sumar, len(preguntas_lista), tiempo_limite_preguntas)
             partida.validar_respuesta(preguntas_lista)
             print('Regresando al menú principal...\n')
+#----------------------------  EJECUTA LA CONFIGURACION   ----------------
+
+        elif seleccion == '2':  
+            print("\nConfigurando el juego...")
+            puntos_sumar, vida, tiempo_limite_preguntas = configuracion_variables(puntos_sumar, vida, tiempo_limite_preguntas)
 
         elif seleccion == '3':  
             print("\nMostrando el TOP de jugadores...")
@@ -40,11 +47,9 @@ def ejecutar():
 
         elif seleccion == '4':  
             print("\nMostrando Menu Agregar Preguntas...")
-            # Agregar lógica del TOP aquí.
         
         elif seleccion == '5':  
             print("\nMostrando Estadisticas de Preguntas...")
-            # Agregar lógica del TOP aquí.
 
         elif seleccion == '6':  
             print("\nSaliendo del juego. ¡Hasta luego!")
